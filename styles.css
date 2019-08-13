@@ -1,0 +1,171 @@
+body {
+    background-color: #1d2025;
+    color: white;
+    font-size: 1em;
+}
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+            "header"
+            "menu"
+            "about"
+            "content"
+            "footer";
+}
+
+.header {
+    grid-area: header;
+    background-size: 100% 10px;
+    /*height: ;*/
+}
+.back {
+    height: 40vh;
+    background: url("img/back.jpg") no-repeat center center;
+    background-size: 100%;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+}
+/*.back h2 {*/
+/*    text-align: center;*/
+/*    vertical-align: middle;*/
+/*    margin: 0;*/
+/*    padding-top: 70px;*/
+/*    font-size: 5vh;*/
+
+/*}*/
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+.titleText {
+    color: #fff;
+    font-family: 'raleway_bold';
+    position: relative;
+    font-size: 35px;
+    padding: 5px 0;
+    border: 3px solid #fff;
+    text-align: center;
+    text-shadow: #000 5px 5px 10px;
+    vertical-align: middle;
+
+}
+.titleDescr {
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-top: 0;
+    color: #fff;
+    position: relative;
+    text-shadow: #000 5px 5px 10px;
+}
+
+
+.menu {
+    grid-area: menu;
+
+}
+.about {
+    grid-area: about;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.contentTitle {
+    width: 100%;
+    font-weight: 100;
+    text-align: center;
+    padding-left: 10px;
+    margin: 5px  0;
+
+}
+
+.list,
+.list li{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul.list li {
+
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.list a {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+@media (min-width: 640px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+                "header header"
+                "menu menu"
+                "about about"
+                "content content"
+                "footer footer";
+    }
+}
+.rainbow {
+    height: 2px;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    width: 100%;
+    margin: 0;
+}
+.content {
+    grid-area: content;
+    min-height: 200px;
+    margin: 20px 0;
+}
+
+.container div.subitems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.subitems div {
+    border: 2px solid antiquewhite;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    min-height: 30px;
+}
+.subitems div img {
+    min-height: 150px;
+    width: 150px;
+
+}
+
+
+.footer {
+    grid-area: footer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-top: 5px;
+    background-size: 100% 10px;
+    min-width: 200px;
+}
+.copyright {
+    text-align: center;
+}
+.copyright p {
+    font-size: 0.5em;
+}
+
